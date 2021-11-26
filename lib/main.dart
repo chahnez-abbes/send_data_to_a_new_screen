@@ -9,7 +9,20 @@ class Todo {
 }
 
 void main() {
-
+  runApp(
+    MaterialApp(
+      title: 'Passing Data',
+      home: Screen(
+        todos: List.generate(
+          20,
+              (i) => Todo(
+            'Item $i',
+            'content of Item $i',
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 class Screen extends StatelessWidget {
