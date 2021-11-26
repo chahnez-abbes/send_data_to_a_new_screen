@@ -36,7 +36,15 @@ class Screen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('listView'),
       ),
+      body: ListView.builder(
+        itemCount: todos.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(todos[index].title),
 
+          );
+        },
+      ),
     );
   }
 }
