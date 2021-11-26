@@ -1,4 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+class Todo {
+  final String title;
+  final String description;
+
+  const Todo(this.title, this.description);
+}
+
+
+
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Todos',
       theme: ThemeData(
 
         primarySwatch: Colors.deepOrange,
